@@ -8,7 +8,7 @@ export default function Arbs() {
 
 useEffect(() => {
   axios
-    .get("https://arbitrage-finder-enkv.onrender.com/api/arbs/all")
+    .get("https://arbitrage-finder-enkv.onrender.com/api/arbs/nba")
     .then((res) => {
 
       // SAFETY: ensure data is an array
