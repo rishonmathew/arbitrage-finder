@@ -1,0 +1,101 @@
+body {
+  background-color: #010c13;
+  color: #e9f1f7;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+/* Page layout */
+.arb-page {
+  padding: 32px;
+}
+
+/* Title */
+.arb-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #79162d; /* main colour */
+  animation: fadeIn 0.8s ease;
+}
+
+/* Loading + No arbs */
+.loading, .no-arbs {
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.7;
+  margin-top: 40px;
+  color: #e9f1f7;
+}
+
+/* Grid layout */
+.arb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 24px;
+}
+
+/* Card */
+.arb-card {
+  background: #0a161d;
+  border-radius: 14px;
+  padding: 20px;
+  border: 2px solid rgba(121,22,45,0.3); /* subtle border */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+  color: #fff;
+  animation: fadeSlideIn 0.4s ease;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.arb-card:hover {
+  transform: translateY(-4px);
+  border-color: #79162d; /* highlight */
+}
+
+/* Game title */
+.arb-game {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e9f1f7;
+}
+
+/* Sport label */
+.arb-sport {
+  font-size: 14px;
+  opacity: 0.55;
+  margin-bottom: 15px;
+}
+
+/* Odds block */
+.arb-odds div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: #e9f1f7;
+}
+
+/* Profit */
+.arb-profit {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #48ff96;
+  font-weight: bold;
+}
+
+/* Stakes */
+.arb-stakes {
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
