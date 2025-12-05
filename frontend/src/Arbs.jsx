@@ -6,18 +6,28 @@ export default function Arbs() {
   const [arbs, setArbs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/arbs/all")
-      .then((res) => {
+useEffect(() => {
+  axios
+    .get("https://arbitrage-finder-enkv.onrender.com/api/arbs/all")
+    .then((res) => {
+
+      // SAFETY: ensure data is an array
+      if (!Array.isArray(res.data)) {
+        console.error("Invalid data returned:", res.data);
+        setArbs([]);
+      } else {
         setArbs(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Fetch error:", err);
-        setLoading(false);
-      });
-  }, []);
+      }
+
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error("Fetch error:", err);
+      setArbs([]);
+      setLoading(false);
+    });
+}, []);
+
 
   if (loading)
     return (
