@@ -8,7 +8,7 @@ export default function Arbs() {
 
   useEffect(() => {
     axios
-      .get("https://arbitrage-finder-enkv.onrender.com/api/arbs/all")
+      .get("http://localhost:5000/api/arbs/all")
       .then((res) => {
         setArbs(res.data);
         setLoading(false);
