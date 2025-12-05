@@ -7,7 +7,7 @@ export default function Arbs() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("https://arbitrage-finder-enkv.onrender.com/")
+    axios.get("http://arbitrage-finder-enkv.onrender.com/")
 
       .then(res => {
         setArbs(res.data);
