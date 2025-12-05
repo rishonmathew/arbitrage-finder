@@ -7,21 +7,24 @@ export default function Arbs() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("https://arbitrage-finder-enkv.onrender.com/api/arbs/all")
-<<<<<<< HEAD
-
-=======
->>>>>>> b071577a543899b08849291e58290718ff5032a2
-
-      .then(res => {
+    axios
+      .get("https://arbitrage-finder-enkv.onrender.com/api/arbs/all")
+      .then((res) => {
         setArbs(res.data);
         setLoading(false);
       })
-      .catch(err => console.error(err));
+      .catch((err) => {
+        console.error("Fetch error:", err);
+        setLoading(false);
+      });
   }, []);
 
   if (loading)
-    return <div className="loading">Loading arbitrage opportunities...</div>;
+    return (
+      <div className="loading">
+        Loading arbitrage opportunities...
+      </div>
+    );
 
   return (
     <div className="arb-page">
@@ -39,11 +42,11 @@ export default function Arbs() {
 
             <div className="arb-odds">
               <div>
-                <strong>{arb.bookAway}</strong>  
+                <strong>{arb.bookAway}</strong>
                 <span>{arb.oddsAway}</span>
               </div>
               <div>
-                <strong>{arb.bookHome}</strong>  
+                <strong>{arb.bookHome}</strong>
                 <span>{arb.oddsHome}</span>
               </div>
             </div>
