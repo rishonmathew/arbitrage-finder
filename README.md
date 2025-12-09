@@ -1,4 +1,9 @@
-Real-time sports betting arbitrage detector (React + Node.js)
+🙋 About This Project
+
+I built this mainly to learn more about API integrations, backend logic, and deploying full-stack apps. Arbitrage is something I’ve always been curious about, so I thought it would be a fun challenge to automate the math and make a small interface for it.
+
+
+**Real-time sports betting arbitrage detector (React + Node.js)**
 
 This project is a small full-stack application I built to automatically scan sports bookmakers and find arbitrage opportunities. Arbitrage betting is when odds between two different sites allow you to bet on both outcomes and still lock in a guaranteed profit, no matter who wins.
 
@@ -84,7 +89,3 @@ Add notifications for new arbitrage
 Better error handling
 Cache odds to reduce API usage
 Cleaner animations and UI updates
-
-🙋 About This Project
-
-I built this mainly to learn more about API integrations, backend logic, and deploying full-stack apps. Arbitrage is something I’ve always been curious about, so I thought it would be a fun challenge to automate the math and make a small interface for it.
