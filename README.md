@@ -2,6 +2,7 @@
 
 I built this mainly to learn more about API integrations, backend logic, and deploying full-stack apps. Arbitrage is something I’ve always been curious about, so I thought it would be a fun challenge to automate the math and make a small interface for it.
 
+---
 
 **Real-time sports betting arbitrage detector (React + Node.js)**
 
@@ -9,7 +10,9 @@ This project is a small full-stack application I built to automatically scan spo
 
 The app pulls live odds from the OddsAPI, compares prices across different bookmakers, and shows any games where an arbitrage exists, along with the recommended stake split and the expected profit percentage.
 
-Tech Used: 
+---
+
+**Tech Used: **
 
 Frontend
 
@@ -28,8 +31,9 @@ REST API endpoints for odds + arbitrage
 Hosted on Render
 REST API endpoints for odds + arbitrage
 
+---
 
-What the App Does
+**What the App Does**
 
 Fetches live odds for NBA (and any other supported sport)
 Compares each bookmaker’s head-to-head markets
@@ -37,8 +41,9 @@ Detects arbitrage using the formula:
 
 (1 / oddsTeamA) + (1 / oddsTeamB) < 1
 
+---
 
-Calculates:
+**Calculates:**
 
 Profit %
 Optimal stake split
@@ -46,7 +51,9 @@ Bookmakers used
 Game information
 Displays opportunities in a clean UI with cards
 
-📚 What I Learned / Skills Demonstrated
+---
+
+**📚 What I Learned / Skills Demonstrated**
 
 Building a full stack project from scratch
 Calling an external API and handling rate limits
@@ -57,7 +64,9 @@ Deploying a backend on Render and frontend on Vercel
 Dealing with CORS, environment variables, and HTTPS
 Debugging real-world issues (timeouts, API failures, merge conflicts)
 
-🛠️ How to Run Locally
+---
+
+**🛠️ How to Run Locally**
 
 Backend
 cd backend
@@ -81,7 +90,9 @@ cd frontend
 npm install
 npm run dev
 
-Future Improvements
+---
+
+**Future Improvements**
 
 Add more sports + filters
 Add auto-refresh
